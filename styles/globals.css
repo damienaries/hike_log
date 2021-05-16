@@ -6,11 +6,10 @@
   --color-accent: #a8c060;
   --color-accent-2: #547239;
   --color-accent-3: #c0d878;
+  --shadow-down: 5px 5px 15px 0px rgba(0,0,0,0.8);
+  --shadow-up: 5px 5px 15px 1px rgba(0,0,0,0.9);
 }
 
-/* SET UP VARIABLES UP HERE 
-
-*/
 /* IMPORT FONTS */
 
 * {
@@ -41,6 +40,5 @@ SHADOWS: {
 
 ANIMATIONS
 MIXINS?
-BREAKPOINT MANAGER
 
 */

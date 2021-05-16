@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Navigation from '../components/Navigation';
-import styles from '../styles/Home.module.css'
 import styled from '@emotion/styled';
 
 export default function Home() {
@@ -23,7 +21,6 @@ export default function Home() {
         objectPosition='right'/>
 
       <main className='home-body'>
-        <Navigation />
         <div className='home-welcome'>
           <h1>Hike Log</h1>
         </div>

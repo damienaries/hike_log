@@ -56,23 +56,28 @@ export default function Navigation() {
                 </div>
                 <ul className='nav-list'>
                     <li>
-                        <Link href='/hikes'>
-                            <a className='nav-list-link'>Hikes</a>
-                        </Link>
-                    </li>
-                    <li >
-                        <Link href='/about'>
-                            <a className='nav-list-link' >About</a>
+                        <Link href='/'>
+                            <a onClick={toggleNav}className='nav-list-link'>Home</a>
                         </Link>
                     </li>
                     <li>
-                        <Link href='/leaderboard'>
-                            <a className='nav-list-link'>Leaderboard</a>
+                        <Link href='/hikes'>
+                            <a onClick={toggleNav}className='nav-list-link'>Hikes</a>
                         </Link>
                     </li>
                     <li>
                         <Link href='/profile'>
-                            <a className='nav-list-link'>My Profile</a>
+                            <a onClick={toggleNav}className='nav-list-link'>My Profile</a>
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href='/leaderboard'>
+                            <a onClick={toggleNav}className='nav-list-link'>Leaderboard</a>
+                        </Link>
+                    </li>
+                    <li >
+                        <Link href='/about'>
+                            <a onClick={toggleNav}className='nav-list-link' >About</a>
                         </Link>
                     </li>
                 </ul>
@@ -91,6 +96,7 @@ const StyledNav = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 5;
 
     .nav-burger {
         margin-left: .5rem;
@@ -107,15 +113,18 @@ const StyledNav = styled.div`
 
     .nav-user-links {
         .nav-user-cta {
-            padding: .25rem 1.5rem;
-            margin-right: .5rem;
+            padding: .5rem 1.5rem;
+            margin-right: 1rem;
             border: none;
             background: var(--bg-light-veil);
             text-transform: uppercase;
+            border-radius: 10px;
+            box-shadow: var(--shadow-down);
 
             &:hover {
                 filter: brightness(110%);
                 cursor: pointer;
+                box-shadow: var(--shadow-up);
             }
         }
     }
